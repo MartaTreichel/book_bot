@@ -1,12 +1,13 @@
 from collections import Counter
+from typing import Dict
 
 path_to_file = "books/frankenstein.txt"
 
-def words_counter(text):
+def words_counter(text: str) -> int:
     """Counts the number of words in the provided text"""
     return len(text.split())
 
-def letter_counter(text):
+def letter_counter(text: str) -> Dict[str, int]:
     """Counts the occurrences of each letter in the provided text"""
     return Counter(letter for letter in text.lower() if letter.isalpha())
 
