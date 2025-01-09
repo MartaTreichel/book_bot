@@ -3,11 +3,7 @@ from collections import Counter
 path_to_file = "books/frankenstein.txt"
 
 def words_counter(text):
-    words = text.split()
-    number_of_words = 0
-    for _ in words:
-        number_of_words += 1
-    return number_of_words
+    return len(text.split()) 
 
 def letter_counter(text):
     return Counter(letter for letter in text.lower() if letter.isalpha())
